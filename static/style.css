@@ -1,0 +1,65 @@
+@import url(href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500;600&display=swap");
+
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Sansita Swashed', cursive;
+    background-color: #e1f4f3;
+    height: 100%;
+
+}
+
+.navbar-header {
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-header h1{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+}
+.container {
+    background-color: rgba(201, 76, 76, 0.3);
+    padding-top:  2.1rem;
+    margin-bottom: .9rem;
+    margin-top: 2.9rem;
+    position: relative;
+}
+
+
+.container h5{
+    font-weight: 400;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+    margin-bottom: 1.9rem;
+}
+
+.heading-underline{
+    width: 5rem;
+    height: .2rem;
+    background-color:  #00e6ac;
+    margin:0 auto 2rem;
+}
+
+/*-- Footer section --*/
+
+footer{
+    background-color: #343a40;
+    color: white;
+    padding: 0.5rem 0 1.2rem;
+    margin-top: .2rem;
+}
+footer a{
+    color: white;
+}
+footer i{
+    font-size: 1.6rem;
+    margin: 1.2rem .5rem 0 0;
+}
+hr.socket{
+    width: 100%;
+    border-top: .2rem solid #666b71;
+    margin-top: .9rem;
+}
