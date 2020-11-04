@@ -244,7 +244,7 @@ def predict():
             d_Hyderabad = 0
             d_Kolkata = 0
 
-        elif (Destination == 'Banglore'):
+        elif (Destination == 'Mumbai'):
             d_Cochin = 0
             d_Delhi = 0
             d_Mumbai = 1
