@@ -365,7 +365,7 @@ def predict():
             Vistara_Premium_economy] + temp_array
 
         data = np.array([temp_array])
-        my_prediction = int(model.predict(data)[0])
+        my_prediction = round( model.predict(data)[0], 2)
         return render_template('index.html', prediction_text="Your Flight price is Rs. {}".format(my_prediction))
 
     return render_template("index.html")
