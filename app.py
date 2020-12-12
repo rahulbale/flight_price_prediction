@@ -339,11 +339,11 @@ def predict():
             Destination_Mumbai
         ]])
         
-        output = round(prediction[0], 2)
+        output = round(prediction[0])
 
         return render_template('index.html', prediction_text="Your Flight price is Rs. {}".format(output))
-
-    return render_template("index.html")
+    else:
+        return render_template("index.html")
 
 if __name__ == "__main__":
     model = joblib.load("flightprice_modelrf.pkl")
