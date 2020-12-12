@@ -8,7 +8,7 @@ import joblib
 app=Flask(__name__,template_folder='template')
 
 #model = pickle.loads(open("flight_price_modal.pkl", "rb"))
-model = joblib.load("flightprice_modelrf.pkl")
+
 
 @app.route("/", methods = ['GET'])
 def home():
@@ -346,7 +346,7 @@ def predict():
     return render_template("index.html")
 
 if __name__ == "__main__":
-   
+    model = joblib.load("flightprice_modelrf.pkl")
     app.run(debug=True)
 
 """
