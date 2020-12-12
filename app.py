@@ -6,8 +6,9 @@ import pandas as pd
 
 app = Flask(__name__)
 
-model = pickle.load(open("flight_price_modal.pkl", "rb"))
+#model = pickle.load(open("flight_price_modal.pkl", "rb"))
 
+loaded_model = joblib.load("flightprice_model")
 
 @app.route("/", method=['GET'])
 def home():
@@ -365,8 +366,11 @@ def predict():
             Vistara_Premium_economy] + temp_array
 
         data = np.array([temp_array])
-        my_prediction = round( model.predict(data)[0], 2)
+        my_prediction = loaded_model.predict(data)
+        #my_prediction = round( model.predict(data)[0], 2)
         return render_template('index.html', prediction_text="Your Flight price is Rs. {}".format(my_prediction))
+        
+        
 
     return render_template("index.html")
 
