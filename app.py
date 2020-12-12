@@ -3,10 +3,12 @@ import sklearn
 import numpy as np
 import pickle
 import pandas as pd
+import 
 
 app=Flask(__name__,template_folder='template')
 
-model = pickle.loads(open("flight_price_modal.pkl", "rb"))
+#model = pickle.loads(open("flight_price_modal.pkl", "rb"))
+model = joblib.load("flightprice_modal")
 
 @app.route("/", methods = ['GET'])
 def home():
