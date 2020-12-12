@@ -6,7 +6,7 @@ import pandas as pd
 
 app=Flask(__name__,template_folder='template')
 
-
+model = pickle.load(open("flight_price_modal.pkl", "rb"))
 
 @app.route("/", methods = ['GET'])
 def home():
@@ -344,7 +344,7 @@ def predict():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    model = pickle.load(open("flight_price_modal.pkl", "rb"))
+   
     app.run(debug=True)
 
 """
