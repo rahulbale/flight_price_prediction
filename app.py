@@ -6,7 +6,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-model = pickle.loads(open("flight_price_modal.pkl", "rb"))
+model = pickle.load(open("flight_price_modal.pkl", "rb"))
 
 
 @app.route("/", method=['GET'])
